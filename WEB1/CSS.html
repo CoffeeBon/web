@@ -15,15 +15,14 @@
         }
 
         /*id값은 단 한번만 등장해야 한다.*/
-     
+
         a {
             color: black;
             text-decoration: none;
         }
 
         h1 {
-            font-size: 100px;
-            font-weight: bold;
+            font-size: 45px;
             font-family: 'Times New Roman', Times, serif;
             text-align: center;
             border-bottom: 1px solid gray;
@@ -31,22 +30,36 @@
             padding: 20px;
         }
 
-        #grid ol {
-            font: 25px bold;
-            border-right: 1px solid grey;
+        ol {
+            border-right: 1px solid gray;
             width: 100px;
             margin: 0;
-            padding: 40px;
-            padding-left: 42px;
-            padding-right: 66px;
-            padding-bottom: 500px;
+            padding: 20px;
         }
+
         #grid {
             display: grid;
             grid-template-columns: 200px 1fr
         }
-        #article {
+
+        #grid ol {
+            padding-left: 42px;
+        }
+
+        #grid #article {
             padding-left: 35px;
+        }
+
+        @media(max-width:800px) {
+            #grid {
+                display: block;
+            }
+            ol {
+                border-right: none;
+            }
+            h1 {
+                 border-bottom: none;
+            }
         }
     </style>
 </head>
